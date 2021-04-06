@@ -144,10 +144,10 @@ class evFiles():
             EvVar.Properties.Analysis.ExcludeAboveLine = processParams.evParams.excludeAbove
             EvVar.Properties.Analysis.ExcludeBelowLine = processParams.evParams.excludeBelow
             EvVar.DetectFishTracks(processParams.evParams.classExport);
-
+            EvFile.Properties.Export.Mode=1
             for item in processParams.evParams.trackExportItems:
                 EvFile.Properties.Export.Variables.Item(item).Enabled=1
-            
+            EvFile.Properties.Export
             exporttest = EvVar.ExportFishTracksByRegionsAll(processParams.evParams.outputDir +'exports\\FishTracks-'+processParams.wbatParams.mooringSer +'-'+\
                                 str(processParams.evParams.gridY)+'m'+'-'+file[-20:-12]+'-'+file[-11:-3]+'.csv')
             if exporttest:
