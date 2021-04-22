@@ -6,7 +6,7 @@ class wbatParams(): # daft/wbat metadata
     mooringSta = 'C11' # DAFT deployment station
     mooringDepth = 47.15 # depth of the mooring, used for surfAve line
     mooringLoc = [70.0136, -166.85755] # DAFT deployment location
-    mooringCompassOffset = 335
+    mooringCompassOffset = 335 #looks like this needs an extra +25
     mooringMagDec = 9.6
     
 class evParams(): # Echoview specific needs
