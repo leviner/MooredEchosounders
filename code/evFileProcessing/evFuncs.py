@@ -172,7 +172,7 @@ class evExports():
         nascDF = pd.DataFrame({'layer':[],'sA':[],'datetime':[]})
         for file in exportFiles:
             curFile = pd.read_csv(file)
-            holding = {'layer':curFile['Layer'].values,'sA':curFile['PRC_NASC'].values,'datetime':pd.to_datetime(curFile['Date_S'].map(str)+'-'+curFile['Time_S'].map(str))}
+            holding = {'layer':curFile['Layer'].values,'sA':curFile['PRC_NASC'].values,'Sv':curFile['Sv_mean'],'datetime':pd.to_datetime(curFile['Date_S'].map(str)+'-'+curFile['Time_S'].map(str))}
             holdingDF = pd.DataFrame(holding)
             nascDF = nascDF.append(holdingDF)
         nascDF.set_index(nascDF["datetime"],inplace=True)
