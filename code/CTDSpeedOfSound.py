@@ -3,7 +3,7 @@ from glob import glob
 import matplotlib.pyplot as plt
 import seawater
 
-tsFiles = glob('../data/physicalData/*TS.csv')
+tsFiles = glob('E:/MooredEchosounders/data/physicalData/*TS.csv')
 site=[1,11,4]
 dt = ['2018-08-15','2018-08-12','2018-08-15']
 dfs = []
@@ -26,3 +26,4 @@ for i in [0,1,2]:
     y['temperature (degree_C)'].plot(ax=fig.axes[i],secondary_y=False,color='deepskyblue',linewidth=2, label = 'Temperature')
     y['salinity'].plot(ax=fig.axes[i],secondary_y=True,color='purple',linewidth=2, label = 'Salinity')
     plt.title('Purple = Salinity         Blue = Temperature')
+plt.show()
